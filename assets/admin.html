@@ -1,0 +1,177 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>РђРґРјРёРЅ-РїР°РЅРµР»СЊ | HandCraft</title>
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+<body>
+    <!-- РЁР°РїРєР° Р°РґРјРёРЅРёСЃС‚СЂР°С‚РёРІРЅРѕР№ РїР°РЅРµР»Рё -->
+    <header>
+        <nav>
+            <a href="../index.html" class="logo">HANDCRAFT (ADMIN)</a>
+            <button class="burger" id="burger" type="button" aria-label="Открыть меню" aria-expanded="false">☰</button>
+            <!-- РЎСЃС‹Р»РєРё Р°РґРјРёРЅРёСЃС‚СЂР°С‚РѕСЂР° -->
+            <ul class="nav-links" id="nav-links">
+                <li><a href="../index.html">РќР° СЃР°Р№С‚</a></li>
+                <li id="nav-auth"><a href="#" id="logout-btn">Р’С‹Р№С‚Рё</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- РћСЃРЅРѕРІРЅРѕРµ СЃРѕРґРµСЂР¶РёРјРѕРµ РїР°РЅРµР»Рё СѓРїСЂР°РІР»РµРЅРёСЏ -->
+    <main class="container fade-in">
+        <h1>РџР°РЅРµР»СЊ СѓРїСЂР°РІР»РµРЅРёСЏ</h1>
+        
+        <!-- Р Р°Р·РґРµР» СѓРїСЂР°РІР»РµРЅРёСЏ С‚РѕРІР°СЂР°РјРё -->
+        <section style="margin-top:2rem;" class="admin-section">
+            <div class="admin-section__head">
+                <div>
+                    <h2>РЈРїСЂР°РІР»РµРЅРёРµ С‚РѕРІР°СЂР°РјРё</h2>
+                    <p class="admin-section__note">Р”РѕР±Р°РІР»СЏР№С‚Рµ РЅРѕРІС‹Рµ РїРѕР·РёС†РёРё Рё СЂРµРґР°РєС‚РёСЂСѓР№С‚Рµ СЃСѓС‰РµСЃС‚РІСѓСЋС‰РёРµ РІ РѕС‚РґРµР»СЊРЅРѕРј РѕРєРЅРµ.</p>
+                </div>
+                <button class="btn admin-save-btn" id="admin-open-product-modal" type="button">Р”РѕР±Р°РІРёС‚СЊ С‚РѕРІР°СЂ</button>
+            </div>
+            <table>
+                <thead>
+                    <tr><th>ID</th><th>РќР°Р·РІР°РЅРёРµ</th><th>Р¦РµРЅР°</th><th>Р”РµР№СЃС‚РІРёСЏ</th></tr>
+                </thead>
+                <tbody id="admin-products"></tbody>
+            </table>
+        </section>
+
+        <!-- Р Р°Р·РґРµР» РїСЂРѕСЃРјРѕС‚СЂР° Рё РёР·РјРµРЅРµРЅРёСЏ Р·Р°РєР°Р·РѕРІ -->
+        <section style="margin-top:2rem;" class="admin-section">
+            <h2>Р—Р°РєР°Р·С‹ РєР»РёРµРЅС‚РѕРІ</h2>
+            <table>
+                <thead>
+                    <tr><th>ID Р—Р°РєР°Р·Р°</th><th>РљР»РёРµРЅС‚</th><th>РЎСѓРјРјР°</th><th>РЎС‚Р°С‚СѓСЃ</th><th>Р”РµР№СЃС‚РІРёСЏ</th></tr>
+                </thead>
+                <tbody id="admin-orders"></tbody>
+            </table>
+        </section>
+
+        <!-- Р Р°Р·РґРµР» СѓРїСЂР°РІР»РµРЅРёСЏ РѕС‚Р·С‹РІР°РјРё -->
+        <section style="margin-top:2rem;" class="admin-section">
+            <div class="admin-section__head">
+                <div>
+                    <h2>РћС‚Р·С‹РІС‹ РєР»РёРµРЅС‚РѕРІ</h2>
+                    <p class="admin-section__note">Р”РѕР±Р°РІР»СЏР№С‚Рµ Рё СЂРµРґР°РєС‚РёСЂСѓР№С‚Рµ РѕС‚Р·С‹РІС‹ Р±РµР· РїСЂРѕРєСЂСѓС‚РєРё СЃС‚СЂР°РЅРёС†С‹ РЅР°РІРµСЂС….</p>
+                </div>
+                <button class="btn admin-save-btn" id="admin-open-review-modal" type="button">Р”РѕР±Р°РІРёС‚СЊ РѕС‚Р·С‹РІ</button>
+            </div>
+            <table>
+                <thead>
+                    <tr><th>ID</th><th>РљР»РёРµРЅС‚</th><th>РћС†РµРЅРєР°</th><th>РћС‚Р·С‹РІ</th><th>Р”РµР№СЃС‚РІРёСЏ</th></tr>
+                </thead>
+                <tbody id="admin-reviews"></tbody>
+            </table>
+        </section>
+    </main>
+
+    <!-- РњРѕРґР°Р»СЊРЅРѕРµ РѕРєРЅРѕ СЂРµРґР°РєС‚РёСЂРѕРІР°РЅРёСЏ С‚РѕРІР°СЂР° -->
+    <div class="admin-modal" id="product-editor-modal" aria-hidden="true">
+        <div class="admin-modal__backdrop" data-admin-modal-close="product-editor-modal"></div>
+        <div class="admin-modal__panel admin-modal__panel--wide" role="dialog" aria-modal="true" aria-labelledby="product-editor-title">
+            <button class="admin-modal__close" type="button" data-admin-modal-close="product-editor-modal" aria-label="Р—Р°РєСЂС‹С‚СЊ РѕРєРЅРѕ">Г—</button>
+            <div class="admin-modal__header">
+                <span class="admin-modal__eyebrow">HandCraft Admin</span>
+                <h3 id="product-editor-title">Р”РѕР±Р°РІРёС‚СЊ С‚РѕРІР°СЂ</h3>
+                <p id="product-editor-subtitle">Р—Р°РїРѕР»РЅРёС‚Рµ РєР°СЂС‚РѕС‡РєСѓ С‚РѕРІР°СЂР° Рё СЃРѕС…СЂР°РЅРёС‚Рµ РёР·РјРµРЅРµРЅРёСЏ.</p>
+            </div>
+            <div class="admin-form-grid">
+                <input type="hidden" id="prod-id">
+                <div class="admin-form-field">
+                    <label for="prod-name">РќР°Р·РІР°РЅРёРµ</label>
+                    <input type="text" id="prod-name" placeholder="РќР°Р·РІР°РЅРёРµ С‚РѕРІР°СЂР°">
+                </div>
+                <div class="admin-form-field">
+                    <label for="prod-category">РљР°С‚РµРіРѕСЂРёСЏ</label>
+                    <input type="text" id="prod-category" placeholder="РљР°С‚РµРіРѕСЂРёСЏ">
+                </div>
+                <div class="admin-form-field admin-form-field--full">
+                    <label for="prod-lead">РљСЂР°С‚РєРёР№ Р°РЅРѕРЅСЃ</label>
+                    <input type="text" id="prod-lead" placeholder="РљСЂР°С‚РєРёР№ Р°РЅРѕРЅСЃ">
+                </div>
+                <div class="admin-form-field">
+                    <label for="prod-price">Р¦РµРЅР°</label>
+                    <input type="number" id="prod-price" placeholder="Р¦РµРЅР°">
+                </div>
+                <div class="admin-form-field">
+                    <label for="prod-img">URL РєР°СЂС‚РёРЅРєРё</label>
+                    <input type="text" id="prod-img" placeholder="URL РєР°СЂС‚РёРЅРєРё">
+                </div>
+                <div class="admin-form-field">
+                    <label for="prod-material">РњР°С‚РµСЂРёР°Р»С‹</label>
+                    <input type="text" id="prod-material" placeholder="РњР°С‚РµСЂРёР°Р»С‹">
+                </div>
+                <div class="admin-form-field">
+                    <label for="prod-dimensions">Р Р°Р·РјРµСЂС‹</label>
+                    <input type="text" id="prod-dimensions" placeholder="Р Р°Р·РјРµСЂС‹">
+                </div>
+                <div class="admin-form-field admin-form-field--full">
+                    <label for="prod-production">РЎСЂРѕРє РёР·РіРѕС‚РѕРІР»РµРЅРёСЏ</label>
+                    <input type="text" id="prod-production" placeholder="РЎСЂРѕРє РёР·РіРѕС‚РѕРІР»РµРЅРёСЏ">
+                </div>
+                <div class="admin-form-field admin-form-field--full">
+                    <label for="prod-desc">РћРїРёСЃР°РЅРёРµ</label>
+                    <textarea id="prod-desc" placeholder="РћРїРёСЃР°РЅРёРµ"></textarea>
+                </div>
+                <div class="admin-form-field admin-form-field--full">
+                    <label for="prod-details">РџСЂРµРёРјСѓС‰РµСЃС‚РІР° С‚РѕРІР°СЂР°</label>
+                    <textarea id="prod-details" placeholder="РљР°Р¶РґРѕРµ РїСЂРµРёРјСѓС‰РµСЃС‚РІРѕ СЃ РЅРѕРІРѕР№ СЃС‚СЂРѕРєРё"></textarea>
+                </div>
+            </div>
+            <div class="admin-form-actions">
+                <button class="btn admin-save-btn" id="admin-save-product" type="button">РЎРѕС…СЂР°РЅРёС‚СЊ С‚РѕРІР°СЂ</button>
+                <button class="btn btn-secondary btn-small" id="admin-clear-product" type="button">РћС‡РёСЃС‚РёС‚СЊ</button>
+                <button class="btn btn-secondary btn-small" id="admin-cancel-product" type="button" data-admin-modal-close="product-editor-modal">Р—Р°РєСЂС‹С‚СЊ</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- РњРѕРґР°Р»СЊРЅРѕРµ РѕРєРЅРѕ СЂРµРґР°РєС‚РёСЂРѕРІР°РЅРёСЏ РѕС‚Р·С‹РІР° -->
+    <div class="admin-modal" id="review-editor-modal" aria-hidden="true">
+        <div class="admin-modal__backdrop" data-admin-modal-close="review-editor-modal"></div>
+        <div class="admin-modal__panel" role="dialog" aria-modal="true" aria-labelledby="review-editor-title">
+            <button class="admin-modal__close" type="button" data-admin-modal-close="review-editor-modal" aria-label="Р—Р°РєСЂС‹С‚СЊ РѕРєРЅРѕ">Г—</button>
+            <div class="admin-modal__header">
+                <span class="admin-modal__eyebrow">HandCraft Admin</span>
+                <h3 id="review-editor-title">Р”РѕР±Р°РІРёС‚СЊ РѕС‚Р·С‹РІ</h3>
+                <p id="review-editor-subtitle">РР·РјРµРЅРµРЅРёСЏ СЃРѕС…СЂР°РЅСЏСЋС‚СЃСЏ С‚РѕР»СЊРєРѕ РїРѕСЃР»Рµ РїРѕРґС‚РІРµСЂР¶РґРµРЅРёСЏ.</p>
+            </div>
+            <div class="admin-form-grid admin-form-grid--single">
+                <input type="hidden" id="review-id">
+                <div class="admin-form-field">
+                    <label for="review-name">РРјСЏ РєР»РёРµРЅС‚Р°</label>
+                    <input type="text" id="review-name" placeholder="РРјСЏ РєР»РёРµРЅС‚Р°">
+                </div>
+                <div class="admin-form-field">
+                    <label for="review-rating">РћС†РµРЅРєР°</label>
+                    <select id="review-rating">
+                        <option value="5">в­ђв­ђв­ђв­ђв­ђ (5)</option>
+                        <option value="4">в­ђв­ђв­ђв­ђ (4)</option>
+                        <option value="3">в­ђв­ђв­ђ (3)</option>
+                        <option value="2">в­ђв­ђ (2)</option>
+                        <option value="1">в­ђ (1)</option>
+                    </select>
+                </div>
+                <div class="admin-form-field admin-form-field--full">
+                    <label for="review-text">РўРµРєСЃС‚ РѕС‚Р·С‹РІР°</label>
+                    <textarea id="review-text" placeholder="РўРµРєСЃС‚ РѕС‚Р·С‹РІР°"></textarea>
+                </div>
+            </div>
+            <div class="admin-form-actions">
+                <button class="btn admin-save-btn" id="admin-save-review" type="button">РЎРѕС…СЂР°РЅРёС‚СЊ РѕС‚Р·С‹РІ</button>
+                <button class="btn btn-secondary btn-small" id="admin-clear-review" type="button">РћС‡РёСЃС‚РёС‚СЊ</button>
+                <button class="btn btn-secondary btn-small" id="admin-cancel-review" type="button" data-admin-modal-close="review-editor-modal">Р—Р°РєСЂС‹С‚СЊ</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="./scripts/main.js"></script>
+</body>
+</html>
+
+

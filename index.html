@@ -1,0 +1,211 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HandCraft Furniture | Главная</title>
+    <link rel="stylesheet" href="./assets/styles/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="./index.html" class="logo">HANDCRAFT</a>
+            <button class="burger" id="burger" type="button" aria-label="Открыть меню" aria-expanded="false">☰</button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="./index.html">Главная</a></li>
+                <li><a href="./assets/catalog.html">Каталог</a></li>
+                <li><a href="./assets/reviews.html">Отзывы</a></li>
+                <li><a href="./assets/cart.html">Корзина</a></li>
+                <li class="nav-dropdown">
+                    <button class="nav-dropdown-toggle" type="button" aria-expanded="false">Ещё ▾</button>
+                    <ul class="nav-dropdown-menu">
+                        <li><a href="#home-catalog">Популярные</a></li>
+                        <li><a href="#furniture-order-form">Заказ мебели</a></li>
+                        <li><a href="./index.html#contacts-section">Контакты</a></li>
+                    </ul>
+                </li>
+                <li class="nav-theme-item">
+                    <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Переключить тему">🌙</button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="slider-container fade-in">
+            <div class="slides">
+                <div class="slide">
+                    <video class="slide-media" autoplay muted playsinline preload="auto">
+                        <source src="./assets/mp4/video.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="slide" style="background-image: url('./assets/img/slaider2.jpg');">
+                    <div class="slide-content">
+                        <h2>Натуральные материалы</h2>
+                        <p>Дуб, ясень, бук и спокойные фактуры, которые красиво стареют со временем.</p>
+                    </div>
+                </div>
+                <div class="slide" style="background-image: url('./assets/img/slider3.jpg');">
+                    <div class="slide-content">
+                        <h2>Для вашего интерьера</h2>
+                        <p>Проектируем решения под квартиру, дом, студию и коммерческие пространства.</p>
+                    </div>
+                </div>
+            </div>
+            <button class="slider-btn prev">❮</button>
+            <button class="slider-btn next">❯</button>
+        </div>
+
+        <section class="container fade-in hero-intro text-center">
+            <span class="section-kicker">Студия мебели</span>
+            <h2>Мебель, которая делает интерьер живым и удобным</h2>
+            <p class="section-text section-text-wide">Мы изготавливаем мебель небольшими сериями и под заказ, учитываем размеры помещения и помогаем подобрать отделку под ваш стиль.</p>
+            <p class="section-text section-text-wide">Подберём материалы под ваш бюджет, подготовим эскиз и предложим варианты, которые гармонично впишутся в ваш интерьер.</p>
+            <div class="hero-actions">
+                <a href="./assets/catalog.html" class="btn">Перейти в каталог</a>
+                <a href="#home-catalog" class="btn btn-secondary">Смотреть коллекцию</a>
+            </div>
+        </section>
+
+        <section class="container fade-in about-tabs-section">
+            <div class="section-heading">
+                <div>
+                    <span class="section-kicker">О нас</span>
+                    <h2>Почему выбирают HandCraft</h2>
+                </div>
+            </div>
+            <div class="about-tabs" id="about-tabs">
+                <div class="about-tabs-controls" role="tablist" aria-label="О компании">
+                    <button class="about-tab-btn active" data-tab="quality" role="tab" aria-selected="true">Качество</button>
+                    <button class="about-tab-btn" data-tab="design" role="tab" aria-selected="false">Дизайн</button>
+                    <button class="about-tab-btn" data-tab="service" role="tab" aria-selected="false">Сервис</button>
+                </div>
+                <div class="about-tab-panels">
+                    <article class="about-tab-panel active" data-panel="quality" role="tabpanel">
+                        <h3>Ручная работа и контроль деталей</h3>
+                        <p>Каждое изделие проходит ручную доводку, поэтому поверхность, стыки и покрытие выглядят аккуратно и служат дольше.</p>
+                    </article>
+                    <article class="about-tab-panel" data-panel="design" role="tabpanel">
+                        <h3>Продуманный дизайн без перегруза</h3>
+                        <p>Мы делаем модели с чистой геометрией, чтобы мебель сочеталась с современными и классическими интерьерами.</p>
+                    </article>
+                    <article class="about-tab-panel" data-panel="service" role="tabpanel">
+                        <h3>Помогаем от идеи до заказа</h3>
+                        <p>Подскажем размеры, материалы и варианты отделки, согласуем детали и держим вас в курсе по срокам изготовления.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="container fade-in contacts-section" id="contacts-section">
+            <div class="section-heading">
+                <div>
+                    <span class="section-kicker">Контакты</span>
+                    <h2>Свяжитесь с нами</h2>
+                </div>
+                <p class="section-text">Оперативно ответим по срокам, стоимости и материалам.</p>
+            </div>
+            <div class="contacts-grid">
+                <article class="info-card contact-tile">
+                    <h3>Адрес</h3>
+                    <p>г. Казань, ул. Чистопольская, 27</p>
+                </article>
+                <article class="info-card contact-tile">
+                    <h3>Телефон</h3>
+                    <p>+7 (495) 123-45-67</p>
+                </article>
+                <article class="info-card contact-tile">
+                    <h3>Почта</h3>
+                    <p>hello@handcraft.local</p>
+                </article>
+                <article class="info-card contact-tile">
+                    <h3>График</h3>
+                    <p>Ежедневно с 10:00 до 20:00</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="container fade-in" id="home-catalog">
+            <div class="section-heading">
+                <div>
+                    <span class="section-kicker">Каталог на главной</span>
+                    <h2>Популярные модели</h2>
+                </div>
+                <p class="section-text">Ниже собраны позиции, которые чаще всего выбирают для гостиной, спальни и столовой.</p>
+            </div>
+            <div class="grid" id="featured-catalog-grid"></div>
+            <div class="section-actions">
+                <a href="./assets/catalog.html" class="btn">Открыть весь каталог</a>
+            </div>
+        </section>
+
+        <section class="container fade-in order-section">
+            <span class="section-kicker">Заказ мебели</span>
+            <h2>Оставьте заявку на индивидуальный заказ</h2>
+            <form id="furniture-order-form" class="order-form" novalidate>
+                <div class="form-group">
+                    <label for="order-name">Ваше имя</label>
+                    <input id="order-name" name="name" type="text" placeholder="Иван" required>
+                </div>
+                <div class="form-group">
+                    <label for="order-phone">Телефон</label>
+                    <input id="order-phone" name="phone" type="tel" placeholder="+7 (900) 123-45-67" required>
+                </div>
+                <div class="form-group form-group-full">
+                    <label for="order-address">Адрес доставки</label>
+                    <input id="order-address" name="address" type="text" placeholder="Город, улица, дом, квартира">
+                </div>
+                <div class="form-group">
+                    <label for="order-item">Что хотите заказать</label>
+                    <select id="order-item" name="item" required>
+                        <option value="">Выберите тип мебели</option>
+                        <option value="Стол">Стол</option>
+                        <option value="Кровать">Кровать</option>
+                        <option value="Шкаф / хранение">Шкаф / хранение</option>
+                        <option value="Диван / кресло">Диван / кресло</option>
+                        <option value="Другое">Другое</option>
+                    </select>
+                </div>
+                <div class="form-group form-group-full">
+                    <label for="order-comment">Комментарий</label>
+                    <textarea id="order-comment" name="comment" placeholder="Размеры, стиль, желаемые сроки"></textarea>
+                </div>
+                <div class="form-group form-group-full">
+                    <button class="btn" type="submit">Отправить заявку</button>
+                </div>
+            </form>
+        </section>
+
+        <section class="container fade-in faq-section">
+            <span class="section-kicker">Вопросы</span>
+            <h2>Частые вопросы</h2>
+            <div class="accordion" id="faq-accordion">
+                <article class="accordion-item">
+                    <button class="accordion-trigger" type="button">Сколько занимает изготовление?</button>
+                    <div class="accordion-content">
+                        <p>Обычно от 7 до 24 дней в зависимости от сложности и выбранных материалов.</p>
+                    </div>
+                </article>
+                <article class="accordion-item">
+                    <button class="accordion-trigger" type="button">Можно ли изменить размеры?</button>
+                    <div class="accordion-content">
+                        <p>Да, большинство моделей адаптируем по размерам и отделке под ваш интерьер.</p>
+                    </div>
+                </article>
+                <article class="accordion-item">
+                    <button class="accordion-trigger" type="button">Есть ли доставка?</button>
+                    <div class="accordion-content">
+                        <p>Доставляем по городу и в соседние регионы, стоимость рассчитывается при подтверждении заказа.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <script src="./assets/scripts/main.js"></script>
+</body>
+</html>
+
+
+
+
